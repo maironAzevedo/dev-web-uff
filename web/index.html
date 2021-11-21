@@ -31,7 +31,9 @@
                     </div>   
                 </div>
                 
-                <button class="mt-3 btn" style="min-width: 100px; align-self: center;" onclick="nextPage()"> Enviar </button>
+                <a style="align-self: center;" href="./logged-page.html">
+                    <button class="mt-3 btn" style="min-width: 100px;"> Enviar </button>
+                </a>
             </fieldset>
         </form>
         
@@ -41,11 +43,6 @@
         <script src="templates/js/bootstrap.min.js"></script>
     
         <script>
-            function nextPage() {
-                console.log("clicou");
-                window.location.replace("./logged-page.html");
-            }
-
             $(document).ready(function() {
                 console.log("carregou");
 		        $('.cpf').mask('000.000.000-00', {reverse: true});
