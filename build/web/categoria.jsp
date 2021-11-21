@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Categoria</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="templates/css/bootstrap.min.css">
@@ -16,7 +16,7 @@ and open the template in the editor.
         
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
-            <a href="./logged-page.html">Home</a>
+            <a href="./logged-page.jsp">Home</a>
         </nav>
         </header>
         
@@ -27,7 +27,8 @@ and open the template in the editor.
                         <label for="categoria" class="col-form-label">Categoria</label>
                         <input type="text" id="categoria" class="categoria form-control " placeholder="Digite a categoria">
                     </div>
-                    <button class="card mt-3 btn" style="min-width: 100px; align-self: center;">Cadastrar</button>
+                    
+                    <button class="card mt-3 btn" style="min-width: 100px; margin: auto;">Cadastrar</button>
                 </div>
             </fieldset>
         </form>

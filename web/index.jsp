@@ -12,8 +12,8 @@
             <img class="card-img-top col-sm-6" style="margin: auto" src="uff-card.png" alt="Logo UFF" min-width="40" min-height="80">
 		
             <div class="card-body">
-                <h1 class="card-title" style="font-size: 1.8rem">AplicaÃ§Ã£o DevWeb - Primeira entrega</h1>
-                <p class="card-text" style="text-align: justify;">A aplicaÃ§Ã£o tem o seguinte objetivo de: apresentar um projeto funcional de um programa que simula a funcionalidade de um banco digital, incluindo uma Ã¡rea pÃºblica, uma Ã¡rea privada e uma Ã¡rea de administraÃ§Ã£o utilizando servlet + jsp para a construÃ§Ã£o da mesma</p>
+                <h1 class="card-title" style="font-size: 1.8rem">Aplicação DevWeb - Primeira entrega</h1>
+                <p class="card-text" style="text-align: justify; color: #333;">A aplicação tem o seguinte objetivo de: apresentar um projeto funcional de um programa que simula a funcionalidade de um organizador financeiro digital, incluindo uma área pública, uma área privada e uma área de administração utilizando servlet + jsp para a construção da mesma</p>
             </div>
 	    </div>
        
@@ -31,7 +31,7 @@
                     </div>   
                 </div>
                 
-                <a class="card mt-3 btn" style="min-width: 100px; align-self: center;" href="./logged-page.html">
+                <a class="card mt-3 btn" style="min-width: 100px; align-self: center;" href="./logged-page.jsp">
                     Enviar
                 </a>
             </fieldset>

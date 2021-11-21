@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Lan√ßamentos</title>
+        <title>LanÁamentos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="templates/css/bootstrap.min.css">
@@ -15,7 +15,7 @@ and open the template in the editor.
     <body>
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
-            <a href="./logged-page.html">Home</a>
+            <a href="./logged-page.jsp">Home</a>
         </nav>
         </header>
         
@@ -31,30 +31,31 @@ and open the template in the editor.
                         <input type="text" id="date" class="date form-control " placeholder="Digite a data">
                     </div>
                     <div>
-                        <label for="descricao" class="col-form-label">Descri√ß√£o (opcional)</label>
-                        <input type="text" id="descricao" class="form-control " placeholder="Digite a descri√ß√£o">
+                        <label for="descricao" class="col-form-label">DescriÁ„o (opcional)</label>
+                        <input type="text" id="descricao" class="form-control " placeholder="Digite a descriÁ„o">
                     </div>
                     <div class="mt-2">
                         <label for="cars">Categoria:</label>
 
                         <select name="categoria" id="categoria">
-                          <option value="transferencia">Transfer√™ncia</option>
-                          <option value="agua">√Ågua</option>
+                          <option value="transferencia">TransferÍncia</option>
+                          <option value="agua">¡Ågua</option>
                           <option value="luz">Luz</option>
-                          <option value="planosaude">Plano de sa√∫de</option>
+                          <option value="planosaude">Plano de sa˙de</option>
                         </select>
                     </div>
-                    <p>Tipo de opera√ß√£o:</p>
+                    <p>Tipo de operaÁ„o:</p>
                     <div>
                         <input type="radio" id="opcaoCategoria"
-                         name="categoria" value="debito">
-                        <label for="opcaoCategoria">Cr√©dito</label>
+                        name="categoria" value="debito">
+                        <label for="opcaoCategoria">CrÈdito</label>     
 
                         <input type="radio" id="opcaoCategoria"
-                         name="categoria" value="credito">
-                        <label for="opcaoCategoria">D√©bito</label>
+                        name="categoria" value="credito">
+                        <label for="opcaoCategoria">DÈbito</label>
                     </div>
-                    <button class="card mt-3 btn" style="min-width: 100px; align-self: center;">Confirmar</button>
+                    
+                    <button class="card mt-3 btn" style="min-width: 100px; margin: auto;">Confirmar</button>
                 </div>
             </fieldset>
         </form>

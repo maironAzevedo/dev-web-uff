@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Cadastro de usuário</title>
+        <title>Cadastro de administrador</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="templates/css/bootstrap.min.css">
@@ -16,16 +16,16 @@ and open the template in the editor.
         
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
-            <a href="./logged-page.html">Home</a>
+            <a href="./logged-page.jsp">Home</a>
         </nav>
         </header>
         
         <form onsubmit="cadastrou()">
-            <fieldset style="max-width:480px; margin:auto; display: flex; flex-direction: column;" name="login">
+            <fieldset style="max-width:480px; margin:auto; display: flex; flex-direction: column;" name="login" onsubmit="console.log('teste')">
                 <div class="mb-2">
                     <div>
                         <label for="nome" class="col-form-label">Nome</label>
-                        <input type="text" id="nome" class="form-control " placeholder="Digite o nome">
+                        <input type="text" id="nome" class="nome form-control " placeholder="Digite o nome">
                     </div>
                     <div>
                         <label for="cpf" class="col-form-label">CPF</label>
@@ -33,9 +33,8 @@ and open the template in the editor.
                     </div>
                     <div>
                         <label for="email" class="col-form-label">E-mail</label>
-                        <input type="email" id="email" class="form-control " placeholder="Digite o E-mail">
-                    </div>
-                    
+                        <input type="email" id="email" class="form-control" placeholder="Digite o E-mail">
+                    </div> 
                 </div>
                 
                 <button class="card mt-3 btn" style="min-width: 100px; align-self: center;">Cadastrar</button>
@@ -51,7 +50,7 @@ and open the template in the editor.
             });
             
             function cadastrou(){
-                alert("Usuário cadastrado com sucesso!");
+                alert("Administrador cadastrado com sucesso!");
             }
 	</script>
         

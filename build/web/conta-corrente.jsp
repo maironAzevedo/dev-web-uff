@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Cadastro de administrador</title>
+        <title>Cadastro de conta corrente</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="templates/css/bootstrap.min.css">
@@ -16,41 +16,41 @@ and open the template in the editor.
         
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
-            <a href="./logged-page.html">Home</a>
+            <a href="./logged-page.jsp">Home</a>
         </nav>
         </header>
         
         <form onsubmit="cadastrou()">
-            <fieldset style="max-width:480px; margin:auto; display: flex; flex-direction: column;" name="login" onsubmit="console.log('teste')">
+            <fieldset style="max-width:480px; margin:auto; display: flex; flex-direction: column;" name="login">
                 <div class="mb-2">
                     <div>
-                        <label for="nome" class="col-form-label">Nome</label>
-                        <input type="text" id="nome" class="nome form-control " placeholder="Digite o nome">
+                        <label for="nomeConta" class="col-form-label">Nome da Conta</label>
+                        <input type="text" id="nomeConta" class="form-control " placeholder="Digite o nome da conta">
                     </div>
                     <div>
-                        <label for="cpf" class="col-form-label">CPF</label>
-                        <input type="text" id="cpf" class="cpf form-control " placeholder="Digite o CPF">
+                        <label for="email" class="col-form-label">Banco</label>
+                        <input type="text" id="banco" class="form-control " placeholder="Digite o banco">
                     </div>
                     <div>
-                        <label for="email" class="col-form-label">E-mail</label>
-                        <input type="email" id="email" class="form-control" placeholder="Digite o E-mail">
-                    </div> 
+                        <label for="agencia" class="col-form-label">Agência</label>
+                        <input type="text" id="agencia" class="form-control " placeholder="Digite a agência">
+                    </div>
+                    <div>
+                        <label for="contaCorrente" class="col-form-label">Conta corrente</label>
+                        <input type="text" id="contaCorrente" class="form-control " placeholder="Digite a conta corrente">
+                    </div>
+                    
                 </div>
                 
                 <button class="card mt-3 btn" style="min-width: 100px; align-self: center;">Cadastrar</button>
             </fieldset>
         </form>
-        
-        <script src="templates/jquery-3.4.1.min.js"></script>
-        <script src="templates/jquery.mask.min.js"></script>
-        
+                
         <script>
-            $(document).ready(function() {
-		        $('.cpf').mask('000.000.000-00', {reverse: true});
-            });
+           
             
             function cadastrou(){
-                alert("Administrador cadastrado com sucesso!");
+                alert("Conta corrente cadastrada com sucesso!");
             }
 	</script>
         
