@@ -21,12 +21,12 @@
             <fieldset style="max-width:480px;margin:auto;" name="login" onsubmit="tchamou()">
                 <div class="mb-2">
                     <div>
-                        <label for="cpf" class="display-1">CPF</label>
+                        <label for="cpf" class="display-4">CPF</label>
                         <input type="text" id="cpf" class="cpf form-control " placeholder="Digite seu CPF">
                     </div>
                     
                     <div>
-                        <label for="senha" class="display-1">Senha</label>
+                        <label for="senha" class="display-4">Senha</label>
                         <input type="password" id="senha" class="form-control " placeholder="Digite sua senha">     
                     </div>   
                 </div>
