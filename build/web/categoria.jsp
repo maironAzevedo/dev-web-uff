@@ -1,12 +1,9 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="entidade.Categoria"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>Categoria</title>
+        <title>Cadastro de Categoria</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="templates/css/bootstrap.min.css">
@@ -16,28 +13,60 @@ and open the template in the editor.
         
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
-            <a href="./logged-page.jsp">Home</a>
+            <a href="./loggedAdmin.jsp">Home</a>
         </nav>
         </header>
         
-        <form onsubmit="cadastrou()">
-            <fieldset style="max-width:480px; margin:auto; display: flex; flex-direction: column;" name="login" onsubmit="console.log('teste')">
-                <div class="mb-2">
-                    <div>
-                        <label for="categoria" class="col-form-label">Categoria</label>
-                        <input type="text" id="categoria" class="categoria form-control " placeholder="Digite a categoria">
-                    </div>
+        <div class="d-flex align-items-start mt-3 mb-3">
+                    <a href="categoriaControl?action=inserir" class="btn btn-primary"><i class="fas fa-plus"></i> Nova categoria </a>
+        </div>
+        
+         <div class="table-responsive">
+                <table class="table table-striped" >
+                    <%
+                        ArrayList<Categoria> categorias = (ArrayList<Categoria>) request.getAttribute("Categoria");
+                    %>
                     
-                    <button class="card mt-3 btn" style="min-width: 100px; margin: auto;">Cadastrar</button>
-                </div>
-            </fieldset>
-        </form>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"> Nome </th>
+                            <th scope="col"> CPF </th>
+                            <th scope="col"> Ações </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                            for (int index = 0; index < categorias.size(); index++) {
+                                
+                                Categoria categoria = categorias.get(index);
+                                
+                                String altera = "categoriaControl?action=alterar&id=" + categoria.getId();
+                                String deleta = "categoriaControl?action=deletar&id=" + categoria.getId();
+                        %>
+                            <tr>
+                                <td><%= categoria.getDescricao() %></td>
+                                <td class="d-flex flex-row justify-content-center align-items-center p-2">
+                                    <a href="<%= altera %>" class="btn m-1"></i>Alterar</a>
+                                    <a href="<%= deleta %>" class="btn m-1"></i>Deletar</a>
+                                </td>
+                            </tr>
+                        <%
+                            }
+                        %>
+                    </tbody>
+                </table>
+            </div>
         
+        <script src="templates/jquery-3.4.1.min.js"></script>
+        <script src="templates/jquery.mask.min.js"></script>
         
-        <script>            
-            function cadastrou(){
-                alert("Categoria cadastrada com sucesso!");
-            }
+        <script>
+            $(document).ready(function() {
+		        $('.cpf').mask('000.000.000-00', {reverse: true});
+            });
 	</script>
+        
+        
     </body>
 </html>
+

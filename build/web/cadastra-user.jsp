@@ -1,9 +1,7 @@
+<%@page import="entidade.Usuario"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="entidade.Administrador"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Cadastro de usuário</title>
@@ -16,44 +14,55 @@ and open the template in the editor.
         
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
-            <a href="./logged-page.jsp">Home</a>
+            <a href="./loggedAdmin.jsp">Home</a>
         </nav>
         </header>
         
-        <form onsubmit="cadastrou()">
-            <fieldset style="max-width:480px; margin:auto; display: flex; flex-direction: column;" name="login">
-                <div class="mb-2">
-                    <div>
-                        <label for="nome" class="col-form-label">Nome</label>
-                        <input type="text" id="nome" class="form-control " placeholder="Digite o nome">
-                    </div>
-                    <div>
-                        <label for="cpf" class="col-form-label">CPF</label>
-                        <input type="text" id="cpf" class="cpf form-control " placeholder="Digite o CPF">
-                    </div>
-                    <div>
-                        <label for="email" class="col-form-label">E-mail</label>
-                        <input type="email" id="email" class="form-control " placeholder="Digite o E-mail">
-                    </div>
+        <div class="d-flex align-items-start mt-3 mb-3">
+                    <a href="userControl?action=inserir" class="btn btn-primary"><i class="fas fa-plus"></i> Novo Usuário </a>
+        </div>
+        
+        <div class="table-responsive">
+                <table class="table table-striped" >
+                    <%
+                        ArrayList<Usuario> usuarios = (ArrayList<Usuario>) request.getAttribute("usuarios");
+                    %>
                     
-                </div>
-                
-                <button class="card mt-3 btn" style="min-width: 100px; align-self: center;">Cadastrar</button>
-            </fieldset>
-        </form>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"> Nome </th>
+                            <th scope="col"> CPF </th>
+                            <th scope="col"> Suspenso </th>
+                            <th scope="col"> Ações </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                            for (int index = 0; index < usuarios.size(); index++) {
+                                
+                                Usuario usuario = usuarios.get(index);
+                                
+                                String altera = "userControl?action=alterar&id=" + usuario.getId();
+                                String deleta = "userControl?action=deletar&id=" + usuario.getId();
+                        %>
+                            <tr>
+                                <td><%= usuario.getNome() %></td>
+                                <td class="cpf"><%= usuario.getCpf() %></td>
+                                <td><%= usuario.getSuspenso()%></td>
+                                <td class="d-flex flex-row">
+                                    <a href="<%= altera %>" class="btn m-1"></i>Alterar</a>
+                                    <a href="<%= deleta %>" class="btn m-1"></i>Deletar</a>
+                                </td>
+                            </tr>
+                        <%
+                            }
+                        %>
+                    </tbody>
+                </table>
+            </div>
         
         <script src="templates/jquery-3.4.1.min.js"></script>
         <script src="templates/jquery.mask.min.js"></script>
-        
-        <script>
-            $(document).ready(function() {
-		        $('.cpf').mask('000.000.000-00', {reverse: true});
-            });
-            
-            function cadastrou(){
-                alert("UsuÃ¡rio cadastrado com sucesso!");
-            }
-	</script>
         
         
     </body>

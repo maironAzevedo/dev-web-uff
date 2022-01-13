@@ -16,7 +16,7 @@ and open the template in the editor.
         
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
-            <a href="./logged-page.jsp">Home</a>
+            <a href="./loggedUser.jsp">Home</a>
         </nav>
         </header>
         
