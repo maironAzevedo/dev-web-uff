@@ -39,7 +39,7 @@ and open the template in the editor.
 
                         <select name="categoria" id="categoria">
                           <option value="transferencia">TransferÍncia</option>
-                          <option value="agua">¡Ågua</option>
+                          <option value="agua">¡gua</option>
                           <option value="luz">Luz</option>
                           <option value="planosaude">Plano de sa˙de</option>
                         </select>
@@ -73,9 +73,6 @@ and open the template in the editor.
             function cadastrou(){
                 alert("Lan√ßamento feito com sucesso!");
             }
-	</script>
-        
-        
-        
+	</script> 
     </body>
 </html>

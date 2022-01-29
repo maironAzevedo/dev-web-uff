@@ -42,18 +42,12 @@ and open the template in the editor.
                     
                 </div>
                 
-                <button class="card mt-3 btn" style="min-width: 100px; align-self: center;">Cadastrar</button>
+                <div class="d-flex align-items-start mt-3 mb-3">
+                    <a href="accountControl?action=inserir" class="btn btn-primary" style="margin: auto">
+                        <i class="fas fa-plus"></i> Cadastrar
+                    </a>
+                </div>
             </fieldset>
-        </form>
-                
-        <script>
-           
-            
-            function cadastrou(){
-                alert("Conta corrente cadastrada com sucesso!");
-            }
-	</script>
-        
-        
+        </form>        
     </body>
 </html>

@@ -18,7 +18,7 @@
         </header>
         
         <div class="d-flex align-items-start mt-3 mb-3">
-                    <a href="adminControl?action=inserir" class="btn btn-primary"><i class="fas fa-plus"></i> Novo Usuário </a>
+            <a href="adminControl?action=inserir" class="btn btn-primary"><i class="fas fa-plus"></i> Novo Usuário </a>
         </div>
         
          <div class="table-responsive">

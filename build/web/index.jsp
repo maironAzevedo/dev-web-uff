@@ -30,7 +30,7 @@
                         <input type="password" id="senha" name="senha" class="form-control " placeholder="Digite sua senha">     
                     </div>
                     <div class="mt-3">
-                        <label>Acesso:     </label>
+                        <label>Acesso:</label>
                         
                         <div class="form-check-inline">
                             <input class="form-check-input" type="radio" name="acesso" id="admin" value="0">
@@ -49,7 +49,7 @@
         
         <footer class="mastfoot mt-auto">
                 <div class="mt-4 text-center">
-                    <span>Desenvolverdores: Mairon Azevedo e Vitor Prado <br/>UFF</span>
+                    <span>Desenvolverdores: Mairon Azevedo e Vitor Prado</span>
                 </div>
         </footer>
         

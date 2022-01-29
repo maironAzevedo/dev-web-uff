@@ -1,4 +1,3 @@
-
 package controller;
 
 import java.io.IOException;
@@ -15,9 +14,6 @@ import model.*;
 
 @WebServlet(name = "LoginControl", urlPatterns = {"/LoginControl"})
 public class LoginControl extends HttpServlet {
-
- 
-   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -43,7 +39,6 @@ public class LoginControl extends HttpServlet {
                 
                 break;
         }
-        
     }
 
     @Override
