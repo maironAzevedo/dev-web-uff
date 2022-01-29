@@ -28,7 +28,7 @@ and open the template in the editor.
                         <input type="text" id="nomeConta" class="form-control " placeholder="Digite o nome da conta">
                     </div>
                     <div>
-                        <label for="email" class="col-form-label">Banco</label>
+                        <label for="banco" class="col-form-label">Banco</label>
                         <input type="text" id="banco" class="form-control " placeholder="Digite o banco">
                     </div>
                     <div>

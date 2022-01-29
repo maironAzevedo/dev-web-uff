@@ -71,9 +71,10 @@ public class accountControl extends HttpServlet {
             if (message.equals("")) {
                 contacorrente.setId(Integer.parseInt(request.getParameter("id")));
                 contacorrente.setUserId(Integer.parseInt(request.getParameter("id_usuario")));
-                contacorrente.setNome(request.getParameter("nome_conta"));
-                contacorrente.setSenha(request.getParameter("banco"));
-                contacorrente.setSuspenso(request.getParameter("suspenso"));
+                contacorrente.setNome(request.getParameter("nomeConta"));
+                contacorrente.setBanco(request.getParameter("banco"));
+                contacorrente.setAgencia(request.getParameter("agencia"));
+                contacorrente.setConta(Integer.parseInt(request.getParameter("contaCorrente")));
 
                 if (contacorrente.getId() == 0) {
                     if (contacorrenteDao.inserirConta(contacorrente)) {
