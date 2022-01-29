@@ -66,7 +66,36 @@ public class accountControl extends HttpServlet {
             if (request.getParameter("conta").equals("")) {
                 message = "Conta vazia";
                 request.setAttribute("error", 1);
-            }  
+            }
+            
+            if (message.equals("")) {
+                contacorrente.setId(Integer.parseInt(request.getParameter("id")));
+                contacorrente.setUserId(Integer.parseInt(request.getParameter("id_usuario")));
+                contacorrente.setNome(request.getParameter("nome_conta"));
+                contacorrente.setSenha(request.getParameter("banco"));
+                contacorrente.setSuspenso(request.getParameter("suspenso"));
+
+                if (contacorrente.getId() == 0) {
+                    if (contacorrenteDao.inserirConta(contacorrente)) {
+                        message = "Conta corrente cadastrada!";
+                        request.setAttribute("error", 0);
+                    } else {
+                        message = "Erro!";
+                        request.setAttribute("error", 1);
+                    }
+                } 
+                /*else {
+                    if (contacorrenteDao.alterarConta(contacorrente)) {
+                        message = "Conta corrente alterada!";
+                        request.setAttribute("error", 0);
+                    } else {
+                        message = "Erro!";
+                        request.setAttribute("error", 1);
+                    }
+                } */
+            }
+            
+            request.setAttribute("message", message);
         } catch(NumberFormatException e) {
             message = "Error: " + e.getMessage();
             System.out.println(message);
