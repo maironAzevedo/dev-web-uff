@@ -139,9 +139,10 @@ public class usuarioDao extends HttpServlet {
     public Usuario logar(String cpf, String senha) {
         Usuario usuario = new Usuario();
         try {
-            Statement statement = conexao.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM usuarios"
-                    + " WHERE suspenso = 'N' AND cpf = '" + String.valueOf(cpf) + "' AND senha = '" + String.valueOf(senha) + "'");
+            PreparedStatement sql = conexao.prepareStatement("select * from usuarios where cpf = ? and senha = ?");
+            sql.setString(1, cpf);
+            sql.setString(2, senha);
+            ResultSet resultSet = sql.executeQuery();
             
             if (resultSet.next()) {
                 usuario.setId(resultSet.getInt("id"));

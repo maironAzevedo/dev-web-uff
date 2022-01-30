@@ -3,17 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/cadastra-user.jsp</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/loggedUser.jsp</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/model/contacorrenteDao.java</file>
             <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/entidade/ContaCorrente.java</file>
+            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/model/contaCorrenteDao.java</file>
             <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/insere-conta.jsp</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/templates/css/bootstrap.min.css</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/insere-user.jsp</file>
             <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/controller/accountControl.java</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/lancamento.jsp</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/templates/css/bootstrap.css</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/cadastra-adm.jsp</file>
+            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/loggedAdmin.jsp</file>
+            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/model/usuarioDao.java</file>
             <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/controller/userControl.java</file>
         </group>
     </open-files>

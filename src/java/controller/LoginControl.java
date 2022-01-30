@@ -75,7 +75,7 @@ public class LoginControl extends HttpServlet {
                 
                 if (usuario.getCpf() != null && acesso.equals("1")) {
                     HttpSession session = request.getSession();
-                    session.setAttribute("usuario", usuario);
+                    session.setAttribute("usuario", usuario.getId());
                     RequestDispatcher login = getServletContext().getRequestDispatcher("/loggedUser.jsp");
                     login.forward(request, response);
                 } else if (administrador.getCpf() != null && acesso.equals("0")) {
