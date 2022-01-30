@@ -41,15 +41,15 @@
                             String altera = "userControl?action=alterar&id=" + usuario.getId();
                             String deleta = "userControl?action=deletar&id=" + usuario.getId();
                     %>
-                        <tr>
-                            <td><%= usuario.getNome() %></td>
-                            <td class="cpf"><%= usuario.getCpf() %></td>
-                            <td><%= usuario.getSuspenso()%></td>
-                            <td class="d-flex flex-row">
-                                <a href="<%= altera %>" class="btn m-1"></i>Alterar</a>
-                                <a href="<%= deleta %>" class="btn m-1"></i>Deletar</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><%= usuario.getNome() %></td>
+                                <td class="cpf"><%= usuario.getCpf() %></td>
+                                <td><%= usuario.getSuspenso()%></td>
+                                <td class="d-flex flex-row">
+                                    <a href="<%= altera %>" class="btn m-1"></i>Alterar</a>
+                                    <a href="<%= deleta %>" class="btn m-1"></i>Deletar</a>
+                                </td>
+                            </tr>
                     <%
                         }
                     %>

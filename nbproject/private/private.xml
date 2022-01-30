@@ -5,11 +5,11 @@
         <group>
             <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/model/contacorrenteDao.java</file>
             <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/entidade/ContaCorrente.java</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/controller/LoginControl.java</file>
             <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/controller/accountControl.java</file>
+            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/insere-user.jsp</file>
             <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/conta-corrente.jsp</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/controller/adminControl.java</file>
-            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/web/index.jsp</file>
+            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/model/usuarioDao.java</file>
+            <file>file:/C:/Users/mairo/Documents/UFF/Quinto%20Período/Dev%20Web/Projeto/dev-web-uff/src/java/controller/userControl.java</file>
         </group>
     </open-files>
 </project-private>

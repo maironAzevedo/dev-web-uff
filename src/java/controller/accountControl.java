@@ -25,6 +25,12 @@ public class accountControl extends HttpServlet {
         String action = (String) request.getParameter("action");
         
         switch (action) {
+            case "inicial":
+                
+                
+                
+                break;
+                
             case "inserir":
                 contacorrente.setId(0);
                 contacorrente.setUserId(0);
