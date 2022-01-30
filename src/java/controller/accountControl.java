@@ -13,7 +13,8 @@ import model.contacorrenteDao;
         
 @WebServlet(name = "accountControl", urlPatterns = {"/accountControl"})
 public class accountControl extends HttpServlet {
-     @Override
+    
+    @Override 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
@@ -26,50 +27,45 @@ public class accountControl extends HttpServlet {
         
         switch (action) {
             case "inicial":
-<<<<<<< HEAD
-                
-                
-                
-                break;
-                
-=======
                 contaId = Integer.parseInt(request.getParameter("id"));
                 contas = contaDAO.buscaContaPorUser(contaId);
                 request.setAttribute("contas", contas);
-                RequestDispatcher get = getServletContext().getRequestDispatcher("/conta-corrente.jsp");
+                RequestDispatcher get = getServletContext().getRequestDispatcher("/insere-conta.jsp");
                 get.forward(request, response);
                 
                 break;
             case "all":
                 contas = contaDAO.listaContas();
                 request.setAttribute("contas", contas);
-                RequestDispatcher list = getServletContext().getRequestDispatcher("/conta-corrente.jsp");
+                RequestDispatcher list = getServletContext().getRequestDispatcher("/insere-conta.jsp");
                 list.forward(request, response);
                 
                 break;
->>>>>>> 223db76544dd71e7db0a699876e6e996e7a3ecc6
+                
             case "inserir":
                 conta.setId(0);
                 conta.setUserId(0);
                 conta.setNome("");
                 conta.setBanco("");
                 conta.setAgencia("");
-                conta.setConta(0);
+                conta.setConta("");
                 
                 request.setAttribute("conta", conta);
-                RequestDispatcher insert = getServletContext().getRequestDispatcher("/conta-corrente.jsp");
+                RequestDispatcher insert = getServletContext().getRequestDispatcher("/insere-conta.jsp");
                 insert.forward(request, response);
-                
+              
                 break;
+                
             case "update":
                 contaId = Integer.parseInt(request.getParameter("id"));
                 conta = contaDAO.buscaConta(contaId);
                 
                 request.setAttribute("conta", conta);
-                RequestDispatcher update = getServletContext().getRequestDispatcher("/conta-corrente.jsp");
+                RequestDispatcher update = getServletContext().getRequestDispatcher("/insere-conta.jsp");
                 update.forward(request, response);
                 
                 break;
+                
             case "delete":
                 contaId = Integer.parseInt(request.getParameter("id"));
                 
@@ -78,85 +74,10 @@ public class accountControl extends HttpServlet {
                 contas = contaDAO.buscaContaPorUser(conta.getUserId());
                 
                 request.setAttribute("contas", contas);
-                RequestDispatcher delete = getServletContext().getRequestDispatcher("/conta-corrente.jsp");
+                RequestDispatcher delete = getServletContext().getRequestDispatcher("/insere-conta.jsp");
                 delete.forward(request, response);
                 
                 break;
-            /*case "balancete":
-                LancamentoDAO lancamentoDAO = new LancamentoDAO();
-                CategoriaDAO categoriaDAO = new CategoriaDAO();
-                Balancete balancete = new Balancete();
-                double creditos_total = 0.0;
-                double debitos_total = 0.0;
-                contaId = Integer.parseInt(request.getParameter("id"));
-                
-                conta = contaDAO.get(contaId);
-                balancete.setNome_conta(conta.getNome_conta());
-                
-                ArrayList<Lancamento> lancamentos = lancamentoDAO.getByConta(contaId);
-                ArrayList<BalanceteRow> balanceteRows = new ArrayList<>();
-                ArrayList<Categoria> categorias = categoriaDAO.getAll();
-                
-                for (int indexCategoria = 0; indexCategoria < categorias.size(); indexCategoria++) {
-                    BalanceteRow balanceteRow = new BalanceteRow();
-                    Categoria categoria = categorias.get(indexCategoria);
-                    double creditos = 0.0;
-                    double debitos = 0.0;
-                    
-                    balanceteRow.setNome(categoria.getDescricao());
-                    for (int indexLancamento = 0; indexLancamento < lancamentos.size(); indexLancamento++) {
-                        Lancamento lancamento = lancamentos.get(indexLancamento);
-                        if (lancamento.getId_categoria() == categoria.getId()) {
-                            if (lancamento.getOperacao().equals("C")) {
-                                creditos += lancamento.getValor();
-                            } else {
-                                debitos += lancamento.getValor();
-                            }
-                        }
-                    }
-                    
-                    creditos_total += creditos;
-                    debitos_total += debitos;
-                    balanceteRow.setCreditos(creditos);
-                    balanceteRow.setDebitos(debitos);
-                    balanceteRow.setPercentual_creditos(creditos / (creditos + debitos));
-                    balanceteRow.setPercentual_debitos(debitos / (creditos + debitos));
-                    
-                    if (balanceteRow.getPercentual_creditos().compareTo(Double.NaN) == 0) {
-                        balanceteRow.setPercentual_creditos(0.0);
-                    }
-                    
-                    if (balanceteRow.getPercentual_debitos().compareTo(Double.NaN) == 0) {
-                        balanceteRow.setPercentual_debitos(0.0);
-                    }
-                    
-                    balanceteRows.add(balanceteRow);
-                }
-                
-                BalanceteRow balanceteRow = new BalanceteRow();
-                balanceteRow.setNome("Total");
-                balanceteRow.setCreditos(creditos_total);
-                balanceteRow.setDebitos(debitos_total);
-                balanceteRow.setPercentual_creditos(creditos_total / (creditos_total + debitos_total));
-                balanceteRow.setPercentual_debitos(debitos_total / (creditos_total + debitos_total));
-                
-                if (balanceteRow.getPercentual_creditos().compareTo(Double.NaN) == 0) {
-                    balanceteRow.setPercentual_creditos(0.0);
-                }
-
-                if (balanceteRow.getPercentual_debitos().compareTo(Double.NaN) == 0) {
-                    balanceteRow.setPercentual_debitos(0.0);
-                }
-                    
-                balanceteRows.add(balanceteRow);
-                
-                balancete.setRows(balanceteRows);
-
-                request.setAttribute("balancete", balancete);
-                RequestDispatcher balanceteRD = getServletContext().getRequestDispatcher("/viewBalancete.jsp");
-                balanceteRD.forward(request, response);
-                
-                break;*/
         }       
     }
 

@@ -5,11 +5,11 @@ public class ContaCorrente {
     private int id;
 
     private int userId;
-    private int conta;
-        
+     
     private String nome;
     private String banco;
-    private String agencia;   
+    private String agencia;
+    private String conta;   
 
     public int getId() {
         return id;
@@ -25,14 +25,6 @@ public class ContaCorrente {
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
-
-    public int getConta() {
-        return conta;
-    }
-
-    public void setConta(int conta) {
-        this.conta = conta;
     }
 
     public String getNome() {
@@ -57,5 +49,13 @@ public class ContaCorrente {
 
     public void setAgencia(String agencia) {
         this.agencia = agencia;
+    }
+    
+    public String getConta() {
+        return conta;
+    }
+
+    public void setConta(String conta) {
+        this.conta = conta;
     }
 }
