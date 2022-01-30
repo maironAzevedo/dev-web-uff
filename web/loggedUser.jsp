@@ -12,7 +12,7 @@
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
             <a href="./loggedUser.jsp">Home</a>
             <a href="./lancamento.jsp">Lançamento</a>
-            <a href="accountControl?action=inserir">Conta Corrente</a>
+            <a href="accountControl?action=inicial">Conta Corrente</a>
         </nav>
     </header>
     <div class="card mb-5 row mt-5 text-center" style="margin: auto; padding: .8rem; max-width: 560px;">
