@@ -14,6 +14,7 @@
             <a href="userControl?action=inicial">Cadastrar Usuário</a>
             <a href="adminControl?action=inicial">Cadastrar Administrador</a>
             <a href="categoriaControl?action=inicial">Cadastrar Categoria</a>
+            <a href="index.jsp">Sair</a>
         </nav>
     </header>
     <div class="card mb-5 row mt-5 text-center" style="margin: auto; padding: .8rem; max-width: 560px;">

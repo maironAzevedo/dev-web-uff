@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Lançamentos</title>
@@ -16,10 +11,11 @@ and open the template in the editor.
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
             <a href="./loggedUser.jsp">Home</a>
+            <a href="index.jsp">Sair</a>
         </nav>
         </header>
         
-        <form onsubmit="cadastrou()">
+        <form>
             <fieldset style="max-width:480px; margin:auto; display: flex; flex-direction: column;" name="login" onsubmit="console.log('teste')">
                 <div class="mb-2">
                     <div>
@@ -64,15 +60,11 @@ and open the template in the editor.
         <script src="templates/jquery.mask.min.js"></script>
         
         <script>
-            $(document).ready(function() {
-		        
-                        $('.date').mask('00/00/0000');
-                        $('.valor').mask("#.##0,00", {reverse: true});
+            $(document).ready(function() {      
+                $('.date').mask('00/00/0000');
+                $('.valor').mask("#.##0,00", {reverse: true});
             });
             
-            function cadastrou(){
-                alert("LanÃ§amento feito com sucesso!");
-            }
 	</script> 
     </body>
 </html>

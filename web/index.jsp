@@ -22,24 +22,12 @@
                 <div class="mb-1">
                     <div>
                         <label for="cpf" class="col-form-label">CPF</label>
-                        <input type="text" id="cpf" name="cpf" class="cpf form-control " placeholder="Digite seu CPF">
+                        <input type="text" id="cpf" name="cpf" class="cpf form-control " placeholder="Digite seu CPF" required>
                     </div>
                     
                     <div>
                         <label for="senha" class="col-form-label">Senha</label>
-                        <input type="password" id="senha" name="senha" class="form-control " placeholder="Digite sua senha">     
-                    </div>
-                    <div class="mt-3">
-                        <label>Acesso:</label>
-                        
-                        <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="acesso" id="admin" value="0">
-                            <label class="form-check-label" for="administrador"> Administrador </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="acesso" id="user" value="1" checked>
-                            <label class="form-check-label" for="usuario"> Usuário </label>
-                        </div>
+                        <input type="password" id="senha" name="senha" class="form-control " placeholder="Digite sua senha" required>     
                     </div>
                 </div>
                 

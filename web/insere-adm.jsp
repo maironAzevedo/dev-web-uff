@@ -12,7 +12,8 @@
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
             <a href="./loggedAdmin.jsp">Home</a>
-             <a href="./adminControl?action=inicial">Cadastrar Administrador</a>
+            <a href="./adminControl?action=inicial">Cadastrar Administrador</a>
+            <a href="index.jsp">Sair</a>
         </nav>
         </header>
         

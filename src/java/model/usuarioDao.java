@@ -139,7 +139,7 @@ public class usuarioDao extends HttpServlet {
     public Usuario logar(String cpf, String senha) {
         Usuario usuario = new Usuario();
         try {
-            PreparedStatement sql = conexao.prepareStatement("select * from usuarios where cpf = ? and senha = ?");
+            PreparedStatement sql = conexao.prepareStatement("SELECT * FROM usuarios WHERE cpf = ? AND senha = ?");
             sql.setString(1, cpf);
             sql.setString(2, senha);
             ResultSet resultSet = sql.executeQuery();
@@ -150,9 +150,12 @@ public class usuarioDao extends HttpServlet {
                 usuario.setCpf(resultSet.getString("cpf"));
                 usuario.setSenha(resultSet.getString("senha"));
                 usuario.setSuspenso(resultSet.getString("suspenso"));
+            } else {
+                return null;
             }
         } catch(SQLException e) {
             System.out.println("SQL Error: " + e.getMessage());
+            return null;
         }
         return usuario;
     }

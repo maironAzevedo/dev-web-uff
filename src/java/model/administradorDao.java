@@ -139,20 +139,22 @@ public class administradorDao extends HttpServlet {
     public Administrador login(String cpf, String senha) {
         Administrador administrador = new Administrador();
         try {
-            Statement st = conexao.createStatement();
-            ResultSet res = st.executeQuery("SELECT * FROM administradores" + 
-                " WHERE cpf = '" + String.valueOf(cpf) + "' AND senha = '" + String.valueOf(senha) + "'");
+            PreparedStatement sql = conexao.prepareStatement("SELECT * FROM administradores WHERE cpf = ? AND senha = ?");
+            sql.setString(1, cpf);
+            sql.setString(2, senha);
+            ResultSet resultSet = sql.executeQuery();
             
-            if (res.next()) {
-                administrador.setId(res.getInt("id"));
-                administrador.setNome(res.getString("nome"));
-                administrador.setCpf(res.getString("cpf"));
-                administrador.setSenha(res.getString("senha"));
+            if (resultSet.next()) {
+                administrador.setId(resultSet.getInt("id"));
+                administrador.setNome(resultSet.getString("nome"));
+                administrador.setCpf(resultSet.getString("cpf"));
+                administrador.setSenha(resultSet.getString("senha"));
             } else {
-                
+                return null;
             }
         } catch(SQLException e) {
             System.out.println("SQL Error: " + e.getMessage());
+            return null;
         }
         return administrador;
     }

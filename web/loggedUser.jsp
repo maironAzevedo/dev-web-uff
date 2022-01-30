@@ -13,6 +13,7 @@
             <a href="./loggedUser.jsp">Home</a>
             <a href="./lancamento.jsp">Lançamento</a>
             <a href="./insere-conta.jsp">Conta Corrente</a>
+            <a href="index.jsp">Sair</a>
         </nav>
     </header>
     <div class="card mb-5 row mt-5 text-center" style="margin: auto; padding: .8rem; max-width: 560px;">

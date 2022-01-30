@@ -13,6 +13,7 @@
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
             <a href="./loggedAdmin.jsp">Home</a>
             <a href="./userControl?action=inicial">Cadastrar Usuário</a>
+            <a href="index.jsp">Sair</a>
         </nav>
         </header>
         
