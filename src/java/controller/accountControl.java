@@ -18,7 +18,6 @@ public class accountControl extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         
-        int id;
         int userId;
         ArrayList<ContaCorrente> contas;
         HttpSession session = request.getSession();
