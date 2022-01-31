@@ -8,6 +8,10 @@
         <link rel="icon" href="uff.jpg">
     </head>
     <body>
+        <%@page import="entidade.Lancamento"%>
+        <%@page import="java.util.ArrayList"%>
+        <%@page import="entidade.Categoria"%>
+        
         <header style="background-color: #f0f0f5; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
             <a href="./loggedUser.jsp">Home</a>
@@ -15,43 +19,60 @@
         </nav>
         </header>
         
-        <form>
+        <%
+            Lancamento lancamento = new Lancamento();
+            ArrayList<Categoria> categorias = (ArrayList<Categoria>) request.getAttribute("categorias");
+        %>
+        
+        <form method="POST" action="launchControl">
             <fieldset style="max-width:480px; margin:auto; display: flex; flex-direction: column;" name="login" onsubmit="console.log('teste')">
                 <div class="mb-2">
                     <div>
-                        <label for="valor" class="col-form-label">Valor</label>
-                        <input type="text" id="valor" class="valor form-control " placeholder="Digite o valor">
+                        <label for="valor" class="col-form-label"><b>Identificador da Conta</b></label>
+                        <input type="text" name="id_conta" class="form-control" placeholder="Digite o valor" value="<%= lancamento.getId_conta() %>">
                     </div>
-                    <div>
-                        <label for="date" class="col-form-label">Data</label>
-                        <input type="text" id="date" class="date form-control " placeholder="Digite a data">
-                    </div>
-                    <div>
-                        <label for="descricao" class="col-form-label">Descrição (opcional)</label>
-                        <input type="text" id="descricao" class="form-control " placeholder="Digite a descrição">
-                    </div>
+                    
                     <div class="mt-2">
-                        <label for="cars">Categoria:</label>
-
-                        <select name="categoria" id="categoria">
-                          <option value="transferencia">Transferência</option>
-                          <option value="agua">Água</option>
-                          <option value="luz">Luz</option>
-                          <option value="planosaude">Plano de saúde</option>
+                        <label for="cars"><b>Categoria</b></label>
+                        <select name="id_categoria" id="categoria" value="<%= lancamento.getId_categoria() %>">
+                          <%
+                            for (int index = 0; index < categorias.size(); index++) {
+                                Categoria categoria = categorias.get(index);
+                          %>
+                                <option value="<%=categoria.getId()%>"><%=categoria.getDescricao()%></option>                          
+                          <%
+                            }
+                          %>
                         </select>
                     </div>
-                    <p>Tipo de operação:</p>
+                    
+                    <div>
+                        <label for="valor" class="col-form-label"><b>Valor</b></label>
+                        <input type="text" name="valor" class="valor form-control " placeholder="Digite o valor" value="<%= lancamento.getValor() %>">
+                    </div>
+                    <br/>
+                    <p><b>Tipo de Operação</b></p>
                     <div>
                         <input type="radio" id="opcaoCategoria"
-                        name="categoria" value="debito">
-                        <label for="opcaoCategoria">Crédito</label>     
+                        name="categoria" value="debito" value="<%= lancamento.getOperacao() %>">
+                        <label for="opcaoCategoria" name="operacao">Crédito</label>     
 
                         <input type="radio" id="opcaoCategoria"
                         name="categoria" value="credito">
-                        <label for="opcaoCategoria">Débito</label>
+                        <label for="opcaoCategoria" name="operacao">Débito</label>
+                    </div> 
+                    
+                    <div>
+                        <label for="date" class="col-form-label"><b>Data</b></label>
+                        <input type="text" name="data" class="date form-control " placeholder="Digite a data" value="<%= lancamento.getData() %>">
                     </div>
                     
-                    <button class="card mt-3 btn" style="min-width: 100px; margin: auto;">Confirmar</button>
+                    <div>
+                        <label for="descricao" class="col-form-label"><b>Descrição</b></label>
+                        <input type="text" name="descricao" class="form-control " placeholder="Digite a descrição" value="<%= lancamento.getDescricao() %>">
+                    </div>
+                    
+                    <button type="submit" class="card mt-3 btn" style="min-width: 100px; margin: auto;">Cadastrar Lançamento</button>
                 </div>
             </fieldset>
         </form>
@@ -61,7 +82,7 @@
         
         <script>
             $(document).ready(function() {      
-                $('.date').mask('00/00/0000');
+                $('.date').mask('0000-00-00');
                 $('.valor').mask("#.##0,00", {reverse: true});
             });
             

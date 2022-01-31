@@ -11,7 +11,7 @@
     <header style="background-color: #f0f0f5; width: 100%; min-height: 40px; display: flex; align-items: center; justify-content: center;">
         <nav style="min-width: 1080px; display: flex; justify-content: space-evenly;">
             <a href="./loggedUser.jsp">Home</a>
-            <a href="./lancamento.jsp">Lançamento</a>
+            <a href="launchControl">Lançamento</a>
             <a href="./insere-conta.jsp">Conta Corrente</a>
             <a href="index.jsp">Sair</a>
         </nav>

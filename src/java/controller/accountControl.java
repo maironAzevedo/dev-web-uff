@@ -83,7 +83,6 @@ public class accountControl extends HttpServlet {
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/loggedUser.jsp");
             rd.forward(request, response);
         }
-
     }
 }
 

@@ -69,7 +69,7 @@ public class userControl extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         
         usuarioDao usuarioDao = new usuarioDao();
         request.setCharacterEncoding("UTF-8");
